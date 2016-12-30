@@ -1,0 +1,13 @@
+
+<!--Create a sorted array of tags-->
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign sortedTags = site_tags | split:',' | sort %}
+  <aside>
+    <h3>Topics</h3>
+ <ul class="archives">
+ 				<li><a href="{{site.baseurl}}/tags/">All Topics</a></li>
+                {% for tag in sortedTags %}
+                    <li><a href="{{site.baseurl}}/tags/#{{ tag | cgi_escape }}">{{ tag }} ({{ site.tags[tag].size }})</a></li>
+                {% endfor %}
+            </ul>
+    </aside>

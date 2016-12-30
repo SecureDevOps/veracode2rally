@@ -1,0 +1,16 @@
+# Site settings
+title: Veracode2Rally
+description: "Companion blog to the lynda.com course, Jekyll for Web Designers. This site is designed to present Jekyll to web designers in a clear, concise way, and provide a resource and reference for those that are new to Jekyll."
+baseurl: "/veracode2rally" 
+url: "http://SecureDevOps.github.io/veracode2rally" 
+tagline: A DevOps tool for integrating Veracode scan results with Rally 
+
+# Build settings
+markdown: kramdown
+kramdown:
+    auto_ids: false
+paginate: 4
+paginate_path: '/blog/page:num/'
+permalink: /blog/:title
+
+gems: [jekyll-paginate, jekyll-gist]
