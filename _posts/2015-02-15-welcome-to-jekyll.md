@@ -5,15 +5,12 @@ date:   2016-12-30
 tags: [Intro, Getting Started]
 ---
 
-Veracode2rally is a java application that exports the results of Veracode static analysis scans into Rally. With each synchronization, Rally defect tickets are opened, updated or closed based on security flaws found in the most recent Veracode scan. Users can choose what type of flaws are exported.
+Veracode2Rally is an open source tool created by DevOps teams for DevOps teams. It speeds software delivery time by directly exporting security flaws found in Veracode static analysis scans and importing them into Rally. No more manually opening, closing and updating Rally tickets. Veracode2Rally manages Rally defect tickets for you based on the results of the last Veracode scan.
 
-    All flaws
-    Flaws affecting policy
-    All unmitigated flaws
-    Unmitigated flaws affecting policy
-
-Developers review open defect tickets in Rally to work on a remediation to fix the security flaw or propose a mitigation. If the developer fixes the flaw, veracode2rally closes the corresponding Rally ticket after the application has been rescanned and synchronized. Mitigations can be proposed within Rally by the developer. Veracode2Rally synchronizes the mitigation request back to Veracode. Once the proposed mitigation is approved, veracode2rally closes the Rally ticket during the next synchronization.
+**Can I just run Veracode2Rally without downloading the source code?** 
+Yes. Download the application here: <a href="https://github.com/SecureDevOps/veracode2rally/blob/master/app/veracode2rally_app.zip?raw=true" target="_blank">Veracode2Rally_app.zip</a> to get the latest build. 
 
    
+
 
 
