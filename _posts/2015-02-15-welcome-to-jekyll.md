@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Veracode2Rally!"
 date:   2016-12-30
-tags: [Intro, Getting Started]
+tags: [Welcome, Getting Started]
 ---
 
 Veracode2Rally is an open source tool created by DevOps teams for DevOps teams. It speeds software delivery time by directly exporting security flaws found in Veracode static analysis scans and importing them into Rally. No more manually opening, closing and updating Rally tickets. Veracode2Rally manages Rally defect tickets for you based on the results of the last Veracode scan.
