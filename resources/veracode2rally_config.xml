@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<veracode2rally_config>
+    <mappings>
+        <mapping>
+            <veracodename/>
+            <veracodeid/>
+            <rallyname/>
+            <rallyid/>
+            <importfilter/>
+        </mapping>
+    </mappings>
+    <veracode encrypt="false">
+        <username/>
+        <password/>
+        <api_id/>
+        <api_key/>
+        <login_credential>Username/Password</login_credential>
+    </veracode>
+    <rally encrypt="false">
+        <username/>
+        <password/>
+        <api_key/>
+        <login_credential>Username/Password</login_credential>
+    </rally>
+    <customfield>
+        <unique_id/>
+        <mitigation_action/>
+        <mitigation_comment/>
+        <mitigation_history/>
+    </customfield>
+</veracode2rally_config>
