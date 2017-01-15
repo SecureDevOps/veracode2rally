@@ -3,7 +3,7 @@ layout: page
 title: About Veracode2Rally
 ---
 
-This software is not supported by Veracode or CA Technologies (Rally). It
+This application is not supported by Veracode or CA Technologies (Rally). It
 is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
