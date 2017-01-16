@@ -1,0 +1,2594 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for veracode2rally_config.xsd</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        var propertiesBoxes= new Array('properties_veracode2rally_config.xsd', 
+				'properties_veracode2rally_config', 
+				'properties_mappings', 
+				'properties_mapping', 
+				'properties_veracodename', 
+				'properties_veracodeid', 
+				'properties_rallyname', 
+				'properties_rallyid', 
+				'properties_importfilter', 
+				'properties_veracode', 
+				'properties_username', 
+				'properties_password', 
+				'properties_api_id', 
+				'properties_api_key', 
+				'properties_login_credential', 
+				'properties_rally', 
+				'properties_customfield', 
+				'properties_unique_id', 
+				'properties_mitigation_action', 
+				'properties_mitigation_comment', 
+				'properties_mitigation_history', 
+				'properties_veracode_encrypt', 
+				'properties_rally_encrypt');
+var usedByBoxes= new Array('usedBy_mappings', 
+				'usedBy_mapping', 
+				'usedBy_veracodename', 
+				'usedBy_veracodeid', 
+				'usedBy_rallyname', 
+				'usedBy_rallyid', 
+				'usedBy_importfilter', 
+				'usedBy_veracode', 
+				'usedBy_username', 
+				'usedBy_password', 
+				'usedBy_api_id', 
+				'usedBy_api_key', 
+				'usedBy_login_credential', 
+				'usedBy_rally', 
+				'usedBy_customfield', 
+				'usedBy_unique_id', 
+				'usedBy_mitigation_action', 
+				'usedBy_mitigation_comment', 
+				'usedBy_mitigation_history', 
+				'usedBy_veracode_encrypt', 
+				'usedBy_rally_encrypt');
+var sourceBoxes= new Array('source_veracode2rally_config', 
+				'source_mappings', 
+				'source_mapping', 
+				'source_veracodename', 
+				'source_veracodeid', 
+				'source_rallyname', 
+				'source_rallyid', 
+				'source_importfilter', 
+				'source_veracode', 
+				'source_username', 
+				'source_password', 
+				'source_api_id', 
+				'source_api_key', 
+				'source_login_credential', 
+				'source_rally', 
+				'source_customfield', 
+				'source_unique_id', 
+				'source_mitigation_action', 
+				'source_mitigation_comment', 
+				'source_mitigation_history', 
+				'source_veracode_encrypt', 
+				'source_rally_encrypt');
+var instanceBoxes= new Array('instance_veracode2rally_config', 
+				'instance_mappings', 
+				'instance_mapping', 
+				'instance_veracode', 
+				'instance_rally', 
+				'instance_customfield');
+var diagramBoxes= new Array('diagram_veracode2rally_config', 
+				'diagram_mappings', 
+				'diagram_mapping', 
+				'diagram_veracodename', 
+				'diagram_veracodeid', 
+				'diagram_rallyname', 
+				'diagram_rallyid', 
+				'diagram_importfilter', 
+				'diagram_veracode', 
+				'diagram_username', 
+				'diagram_password', 
+				'diagram_api_id', 
+				'diagram_api_key', 
+				'diagram_login_credential', 
+				'diagram_rally', 
+				'diagram_customfield', 
+				'diagram_unique_id', 
+				'diagram_mitigation_action', 
+				'diagram_mitigation_comment', 
+				'diagram_mitigation_history');
+var attributesBoxes= new Array('attributes_veracode', 
+				'attributes_rally');
+var modelBoxes= new Array('model_veracode2rally_config', 
+				'model_mappings', 
+				'model_mapping', 
+				'model_veracode', 
+				'model_rally', 
+				'model_customfield');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, attributesBoxes);" class="control" /></span><span class="globalControlName">Attributes </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="veracode2rally_config.xsd"></a><div class="componentTitle">Main schema <span class="qname">veracode2rally_config.xsd</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_veracode2rally_config.xsd" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_veracode2rally_config.xsd');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_veracode2rally_config.xsd" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">attribute form default</td>
+                                    <td><b>unqualified</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">element form default</td>
+                                    <td><b>qualified</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="veracode2rally_config"></a><div class="componentTitle">Element <span class="qname">veracode2rally_config</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_veracode2rally_config" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_veracode2rally_config');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_veracode2rally_config" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_veracode2rally_config.jpeg" usemap="#veracode2rally_config_xsd_Element_veracode2rally_config" /><map name="veracode2rally_config_xsd_Element_veracode2rally_config" id="veracode2rally_config_xsd_Element_veracode2rally_config">
+                                 <area alt="veracode2rally_config_xsd.tmp#mappings" href="veracode2rally_config_xsd.html#mappings" coords="238,2,315,27" />
+                                 <area alt="veracode2rally_config_xsd.tmp#veracode" href="veracode2rally_config_xsd.html#veracode" coords="238,37,315,62" />
+                                 <area alt="veracode2rally_config_xsd.tmp#rally" href="veracode2rally_config_xsd.html#rally" coords="238,72,289,97" />
+                                 <area alt="veracode2rally_config_xsd.tmp#customfield" href="veracode2rally_config_xsd.html#customfield" coords="238,107,324,132" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_veracode2rally_config" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_veracode2rally_config');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_veracode2rally_config" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_veracode2rally_config" type="image" src="img/btM.gif" value="-" onclick="switchState('model_veracode2rally_config');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_veracode2rally_config" style="display:block"><b><a href="veracode2rally_config_xsd.html#mappings" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mappings</a></b> , <b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b> , <b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b> , <b><a href="veracode2rally_config_xsd.html#customfield" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">customfield</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="veracode2rally_config_xsd.html#customfield" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">customfield</a></b>, <b><a href="veracode2rally_config_xsd.html#mappings" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mappings</a></b>, <b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b>, <b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_veracode2rally_config" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_veracode2rally_config');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_veracode2rally_config" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;veracode2rally_config</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;mappings</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/mappings&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;veracode</span><span class="tT"> </span><span class="tAN">encrypt=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/veracode&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;rally</span><span class="tT"> </span><span class="tAN">encrypt=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/rally&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;customfield</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/customfield&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/veracode2rally_config&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_veracode2rally_config" type="image" src="img/btM.gif" value="-" onclick="switchState('source_veracode2rally_config');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_veracode2rally_config" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"veracode2rally_config"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"mappings"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"veracode"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"rally"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"customfield"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="mappings"></a><div class="componentTitle">Element <span class="qname">mappings</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_mappings" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_mappings');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_mappings" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_mappings.jpeg" usemap="#veracode2rally_config_xsd_Element_mappings" /><map name="veracode2rally_config_xsd_Element_mappings" id="veracode2rally_config_xsd_Element_mappings">
+                                 <area alt="veracode2rally_config_xsd.tmp#mapping" href="veracode2rally_config_xsd.html#mapping" coords="176,6,247,31" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_mappings" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_mappings');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_mappings" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_mappings" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_mappings');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_mappings" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#veracode2rally_config" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode2rally_config</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_mappings" type="image" src="img/btM.gif" value="-" onclick="switchState('model_mappings');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_mappings" style="display:block"><b><a href="veracode2rally_config_xsd.html#mapping" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mapping</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="veracode2rally_config_xsd.html#mapping" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mapping</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_mappings" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_mappings');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_mappings" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;mappings</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;mapping</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/mapping&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/mappings&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_mappings" type="image" src="img/btM.gif" value="-" onclick="switchState('source_mappings');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_mappings" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"mappings"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"mapping"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="mapping"></a><div class="componentTitle">Element <span class="qname">mapping</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_mapping" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_mapping');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_mapping" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_mapping.jpeg" usemap="#veracode2rally_config_xsd_Element_mapping" /><map name="veracode2rally_config_xsd_Element_mapping" id="veracode2rally_config_xsd_Element_mapping">
+                                 <area alt="veracode2rally_config_xsd.tmp#veracodename" href="veracode2rally_config_xsd.html#veracodename" coords="170,2,262,27" />
+                                 <area alt="veracode2rally_config_xsd.tmp#veracodeid" href="veracode2rally_config_xsd.html#veracodeid" coords="170,37,244,62" />
+                                 <area alt="veracode2rally_config_xsd.tmp#rallyname" href="veracode2rally_config_xsd.html#rallyname" coords="170,72,236,97" />
+                                 <area alt="veracode2rally_config_xsd.tmp#rallyid" href="veracode2rally_config_xsd.html#rallyid" coords="170,107,218,132" />
+                                 <area alt="veracode2rally_config_xsd.tmp#importfilter" href="veracode2rally_config_xsd.html#importfilter" coords="170,142,240,167" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_mapping" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_mapping');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_mapping" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_mapping" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_mapping');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_mapping" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#mappings" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mappings</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_mapping" type="image" src="img/btM.gif" value="-" onclick="switchState('model_mapping');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_mapping" style="display:block"><b><a href="veracode2rally_config_xsd.html#veracodename" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracodename</a></b> , <b><a href="veracode2rally_config_xsd.html#veracodeid" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracodeid</a></b> , <b><a href="veracode2rally_config_xsd.html#rallyname" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rallyname</a></b> , <b><a href="veracode2rally_config_xsd.html#rallyid" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rallyid</a></b> , <b><a href="veracode2rally_config_xsd.html#importfilter" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">importfilter</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="veracode2rally_config_xsd.html#importfilter" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">importfilter</a></b>, <b><a href="veracode2rally_config_xsd.html#rallyid" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rallyid</a></b>, <b><a href="veracode2rally_config_xsd.html#rallyname" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rallyname</a></b>, <b><a href="veracode2rally_config_xsd.html#veracodeid" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracodeid</a></b>, <b><a href="veracode2rally_config_xsd.html#veracodename" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracodename</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_mapping" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_mapping');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_mapping" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;mapping</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;veracodename</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/veracodename&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;veracodeid</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/veracodeid&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;rallyname</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/rallyname&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;rallyid</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/rallyid&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;importfilter</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/importfilter&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/mapping&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_mapping" type="image" src="img/btM.gif" value="-" onclick="switchState('source_mapping');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_mapping" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"mapping"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"veracodename"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"veracodeid"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"rallyname"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"rallyid"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"importfilter"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="veracodename"></a><div class="componentTitle">Element <span class="qname">veracodename</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_veracodename" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_veracodename');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_veracodename" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_veracodename.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_veracodename" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_veracodename');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_veracodename" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_veracodename" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_veracodename');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_veracodename" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#mapping" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mapping</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_veracodename" type="image" src="img/btM.gif" value="-" onclick="switchState('source_veracodename');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_veracodename" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"veracodename"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="veracodeid"></a><div class="componentTitle">Element <span class="qname">veracodeid</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_veracodeid" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_veracodeid');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_veracodeid" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_veracodeid.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_veracodeid" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_veracodeid');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_veracodeid" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_veracodeid" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_veracodeid');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_veracodeid" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#mapping" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mapping</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_veracodeid" type="image" src="img/btM.gif" value="-" onclick="switchState('source_veracodeid');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_veracodeid" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"veracodeid"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="rallyname"></a><div class="componentTitle">Element <span class="qname">rallyname</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_rallyname" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_rallyname');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_rallyname" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_rallyname.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_rallyname" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_rallyname');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_rallyname" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_rallyname" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_rallyname');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_rallyname" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#mapping" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mapping</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_rallyname" type="image" src="img/btM.gif" value="-" onclick="switchState('source_rallyname');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_rallyname" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"rallyname"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="rallyid"></a><div class="componentTitle">Element <span class="qname">rallyid</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_rallyid" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_rallyid');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_rallyid" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_rallyid.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_rallyid" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_rallyid');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_rallyid" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_rallyid" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_rallyid');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_rallyid" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#mapping" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mapping</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_rallyid" type="image" src="img/btM.gif" value="-" onclick="switchState('source_rallyid');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_rallyid" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"rallyid"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="importfilter"></a><div class="componentTitle">Element <span class="qname">importfilter</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_importfilter" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_importfilter');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_importfilter" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_importfilter.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_importfilter" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_importfilter');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_importfilter" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_importfilter" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_importfilter');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_importfilter" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#mapping" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mapping</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_importfilter" type="image" src="img/btM.gif" value="-" onclick="switchState('source_importfilter');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_importfilter" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"importfilter"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="veracode"></a><div class="componentTitle">Element <span class="qname">veracode</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_veracode" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_veracode');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_veracode" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_veracode.jpeg" usemap="#veracode2rally_config_xsd_Element_veracode" /><map name="veracode2rally_config_xsd_Element_veracode" id="veracode2rally_config_xsd_Element_veracode">
+                                 <area alt="veracode2rally_config_xsd.tmp#veracode_encrypt" href="veracode2rally_config_xsd.html#veracode_encrypt" coords="119,41,235,85" />
+                                 <area alt="veracode2rally_config_xsd.tmp#username" href="veracode2rally_config_xsd.html#username" coords="176,102,244,127" />
+                                 <area alt="veracode2rally_config_xsd.tmp#password" href="veracode2rally_config_xsd.html#password" coords="176,137,246,162" />
+                                 <area alt="veracode2rally_config_xsd.tmp#api_id" href="veracode2rally_config_xsd.html#api_id" coords="176,172,224,197" />
+                                 <area alt="veracode2rally_config_xsd.tmp#api_key" href="veracode2rally_config_xsd.html#api_key" coords="176,207,233,232" />
+                                 <area alt="veracode2rally_config_xsd.tmp#login_credential" href="veracode2rally_config_xsd.html#login_credential" coords="176,242,282,286" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_veracode" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_veracode');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_veracode" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_veracode" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_veracode');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_veracode" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#veracode2rally_config" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode2rally_config</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_veracode" type="image" src="img/btM.gif" value="-" onclick="switchState('model_veracode');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_veracode" style="display:block"><b><a href="veracode2rally_config_xsd.html#username" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">username</a></b> , <b><a href="veracode2rally_config_xsd.html#password" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">password</a></b> , <b><a href="veracode2rally_config_xsd.html#api_id" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">api_id</a></b> , <b><a href="veracode2rally_config_xsd.html#api_key" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">api_key</a></b> , <b><a href="veracode2rally_config_xsd.html#login_credential" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">login_credential</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="veracode2rally_config_xsd.html#api_id" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">api_id</a></b>, <b><a href="veracode2rally_config_xsd.html#api_key" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">api_key</a></b>, <b><a href="veracode2rally_config_xsd.html#login_credential" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">login_credential</a></b>, <b><a href="veracode2rally_config_xsd.html#password" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">password</a></b>, <b><a href="veracode2rally_config_xsd.html#username" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">username</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_veracode" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_veracode');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_veracode" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;veracode</span><span class="tT"> </span><span class="tAN">encrypt=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;username</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/username&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;password</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/password&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;api_id</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/api_id&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;api_key</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/api_key&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;login_credential</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/login_credential&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/veracode&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_veracode" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_veracode');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_veracode" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="veracode2rally_config_xsd.html#veracode_encrypt" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">encrypt</a></b></td>
+                                    <td><b>xs:boolean</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_veracode" type="image" src="img/btM.gif" value="-" onclick="switchState('source_veracode');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_veracode" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"veracode"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"username"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"password"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"api_id"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"api_key"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"login_credential"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"encrypt"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="username"></a><div class="componentTitle">Element <span class="qname">username</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_username" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_username');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_username" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_username.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_username" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_username');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_username" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_username" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_username');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_username" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b>, <b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_username" type="image" src="img/btM.gif" value="-" onclick="switchState('source_username');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_username" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"username"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="password"></a><div class="componentTitle">Element <span class="qname">password</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_password" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_password');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_password" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_password.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_password" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_password');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_password" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_password" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_password');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_password" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b>, <b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_password" type="image" src="img/btM.gif" value="-" onclick="switchState('source_password');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_password" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"password"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="api_id"></a><div class="componentTitle">Element <span class="qname">api_id</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_api_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_api_id');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_api_id" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_api_id.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_api_id" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_api_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_api_id" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_api_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_api_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_api_id" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_api_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_api_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_api_id" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"api_id"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="api_key"></a><div class="componentTitle">Element <span class="qname">api_key</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_api_key" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_api_key');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_api_key" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_api_key.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_api_key" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_api_key');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_api_key" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_api_key" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_api_key');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_api_key" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b>, <b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_api_key" type="image" src="img/btM.gif" value="-" onclick="switchState('source_api_key');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_api_key" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"api_key"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="login_credential"></a><div class="componentTitle">Element <span class="qname">login_credential</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_login_credential" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_login_credential');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_login_credential" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_login_credential.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:string</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_login_credential" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_login_credential');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_login_credential" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_login_credential" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_login_credential');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_login_credential" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b>, <b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_login_credential" type="image" src="img/btM.gif" value="-" onclick="switchState('source_login_credential');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_login_credential" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"login_credential"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="rally"></a><div class="componentTitle">Element <span class="qname">rally</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_rally" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_rally');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_rally" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_rally.jpeg" usemap="#veracode2rally_config_xsd_Element_rally" /><map name="veracode2rally_config_xsd_Element_rally" id="veracode2rally_config_xsd_Element_rally">
+                                 <area alt="veracode2rally_config_xsd.tmp#rally_encrypt" href="veracode2rally_config_xsd.html#rally_encrypt" coords="93,41,209,85" />
+                                 <area alt="veracode2rally_config_xsd.tmp#username" href="veracode2rally_config_xsd.html#username" coords="150,102,218,127" />
+                                 <area alt="veracode2rally_config_xsd.tmp#password" href="veracode2rally_config_xsd.html#password" coords="150,137,220,162" />
+                                 <area alt="veracode2rally_config_xsd.tmp#api_key" href="veracode2rally_config_xsd.html#api_key" coords="150,172,207,197" />
+                                 <area alt="veracode2rally_config_xsd.tmp#login_credential" href="veracode2rally_config_xsd.html#login_credential" coords="150,207,256,251" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_rally" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_rally');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_rally" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_rally" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_rally');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_rally" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#veracode2rally_config" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode2rally_config</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_rally" type="image" src="img/btM.gif" value="-" onclick="switchState('model_rally');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_rally" style="display:block"><b><a href="veracode2rally_config_xsd.html#username" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">username</a></b> , <b><a href="veracode2rally_config_xsd.html#password" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">password</a></b> , <b><a href="veracode2rally_config_xsd.html#api_key" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">api_key</a></b> , <b><a href="veracode2rally_config_xsd.html#login_credential" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">login_credential</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="veracode2rally_config_xsd.html#api_key" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">api_key</a></b>, <b><a href="veracode2rally_config_xsd.html#login_credential" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">login_credential</a></b>, <b><a href="veracode2rally_config_xsd.html#password" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">password</a></b>, <b><a href="veracode2rally_config_xsd.html#username" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">username</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_rally" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_rally');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_rally" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;rally</span><span class="tT"> </span><span class="tAN">encrypt=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;username</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/username&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;password</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/password&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;api_key</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/api_key&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;login_credential</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/login_credential&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/rally&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_rally" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_rally');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_rally" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="veracode2rally_config_xsd.html#rally_encrypt" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">encrypt</a></b></td>
+                                    <td><b>xs:boolean</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_rally" type="image" src="img/btM.gif" value="-" onclick="switchState('source_rally');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_rally" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"rally"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"username"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"password"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"api_key"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"login_credential"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"encrypt"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="customfield"></a><div class="componentTitle">Element <span class="qname">customfield</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_customfield" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_customfield');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_customfield" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_customfield.jpeg" usemap="#veracode2rally_config_xsd_Element_customfield" /><map name="veracode2rally_config_xsd_Element_customfield" id="veracode2rally_config_xsd_Element_customfield">
+                                 <area alt="veracode2rally_config_xsd.tmp#unique_id" href="veracode2rally_config_xsd.html#unique_id" coords="185,2,251,27" />
+                                 <area alt="veracode2rally_config_xsd.tmp#mitigation_action" href="veracode2rally_config_xsd.html#mitigation_action" coords="185,37,284,62" />
+                                 <area alt="veracode2rally_config_xsd.tmp#mitigation_comment" href="veracode2rally_config_xsd.html#mitigation_comment" coords="185,72,298,97" />
+                                 <area alt="veracode2rally_config_xsd.tmp#mitigation_history" href="veracode2rally_config_xsd.html#mitigation_history" coords="185,107,288,132" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_customfield" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_customfield');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_customfield" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_customfield" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_customfield');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_customfield" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#veracode2rally_config" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode2rally_config</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_customfield" type="image" src="img/btM.gif" value="-" onclick="switchState('model_customfield');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_customfield" style="display:block"><b><a href="veracode2rally_config_xsd.html#unique_id" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">unique_id</a></b> , <b><a href="veracode2rally_config_xsd.html#mitigation_action" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mitigation_action</a></b> , <b><a href="veracode2rally_config_xsd.html#mitigation_comment" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mitigation_comment</a></b> , <b><a href="veracode2rally_config_xsd.html#mitigation_history" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mitigation_history</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="veracode2rally_config_xsd.html#mitigation_action" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mitigation_action</a></b>, <b><a href="veracode2rally_config_xsd.html#mitigation_comment" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mitigation_comment</a></b>, <b><a href="veracode2rally_config_xsd.html#mitigation_history" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">mitigation_history</a></b>, <b><a href="veracode2rally_config_xsd.html#unique_id" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">unique_id</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_customfield" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_customfield');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_customfield" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;customfield</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;unique_id</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/unique_id&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;mitigation_action</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/mitigation_action&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;mitigation_comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/mitigation_comment&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;mitigation_history</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/mitigation_history&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/customfield&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_customfield" type="image" src="img/btM.gif" value="-" onclick="switchState('source_customfield');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_customfield" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"customfield"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"unique_id"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"mitigation_action"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"mitigation_comment"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"mitigation_history"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="unique_id"></a><div class="componentTitle">Element <span class="qname">unique_id</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_unique_id" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_unique_id');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_unique_id" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_unique_id.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_unique_id" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_unique_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_unique_id" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_unique_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_unique_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_unique_id" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#customfield" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">customfield</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_unique_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_unique_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_unique_id" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"unique_id"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="mitigation_action"></a><div class="componentTitle">Element <span class="qname">mitigation_action</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_mitigation_action" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_mitigation_action');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_mitigation_action" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_mitigation_action.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_mitigation_action" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_mitigation_action');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_mitigation_action" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_mitigation_action" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_mitigation_action');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_mitigation_action" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#customfield" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">customfield</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_mitigation_action" type="image" src="img/btM.gif" value="-" onclick="switchState('source_mitigation_action');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_mitigation_action" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"mitigation_action"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="mitigation_comment"></a><div class="componentTitle">Element <span class="qname">mitigation_comment</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_mitigation_comment" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_mitigation_comment');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_mitigation_comment" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_mitigation_comment.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_mitigation_comment" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_mitigation_comment');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_mitigation_comment" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_mitigation_comment" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_mitigation_comment');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_mitigation_comment" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#customfield" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">customfield</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_mitigation_comment" type="image" src="img/btM.gif" value="-" onclick="switchState('source_mitigation_comment');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_mitigation_comment" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"mitigation_comment"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="mitigation_history"></a><div class="componentTitle">Element <span class="qname">mitigation_history</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_mitigation_history" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_mitigation_history');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_mitigation_history" style="display:block"><img alt="Diagram" border="0" src="img/veracode2rally_config_xsd_Element_mitigation_history.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_mitigation_history" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_mitigation_history');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_mitigation_history" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_mitigation_history" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_mitigation_history');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_mitigation_history" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#customfield" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">customfield</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_mitigation_history" type="image" src="img/btM.gif" value="-" onclick="switchState('source_mitigation_history');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_mitigation_history" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"mitigation_history"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="veracode_encrypt"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b> / @encrypt</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:boolean</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_veracode_encrypt" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_veracode_encrypt');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_veracode_encrypt" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_veracode_encrypt" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_veracode_encrypt');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_veracode_encrypt" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#veracode" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">veracode</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_veracode_encrypt" type="image" src="img/btM.gif" value="-" onclick="switchState('source_veracode_encrypt');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_veracode_encrypt" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"encrypt"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="rally_encrypt"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b> / @encrypt</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:boolean</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_rally_encrypt" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_rally_encrypt');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_rally_encrypt" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_rally_encrypt" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_rally_encrypt');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_rally_encrypt" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="veracode2rally_config_xsd.html#rally" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for veracode2rally_config.xsd')">rally</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_rally_encrypt" type="image" src="img/btM.gif" value="-" onclick="switchState('source_rally_encrypt');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_rally_encrypt" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"encrypt"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:boolean"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+      </div><script type="text/javascript">
+         <!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

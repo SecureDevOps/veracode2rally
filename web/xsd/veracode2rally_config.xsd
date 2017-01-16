@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="veracode2rally_config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mappings"/>
+        <xs:element ref="veracode"/>
+        <xs:element ref="rally"/>
+        <xs:element ref="customfield"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="veracodename"/>
+        <xs:element ref="veracodeid"/>
+        <xs:element ref="rallyname"/>
+        <xs:element ref="rallyid"/>
+        <xs:element ref="importfilter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="veracodename">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="veracodeid">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="rallyname">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="rallyid">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="importfilter">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="veracode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="username"/>
+        <xs:element ref="password"/>
+        <xs:element ref="api_id"/>
+        <xs:element ref="api_key"/>
+        <xs:element ref="login_credential"/>
+      </xs:sequence>
+      <xs:attribute name="encrypt" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="api_id">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="rally">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="username"/>
+        <xs:element ref="password"/>
+        <xs:element ref="api_key"/>
+        <xs:element ref="login_credential"/>
+      </xs:sequence>
+      <xs:attribute name="encrypt" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customfield">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="unique_id"/>
+        <xs:element ref="mitigation_action"/>
+        <xs:element ref="mitigation_comment"/>
+        <xs:element ref="mitigation_history"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unique_id">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="mitigation_action">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="mitigation_comment">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="mitigation_history">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="username">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="password">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="api_key">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="login_credential" type="xs:string"/>
+</xs:schema>
