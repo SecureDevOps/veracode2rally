@@ -22,35 +22,35 @@ public class Customfield {
 	}
 
 	public String getMitigation_action() {
-		return mitigation_action;
+		return mitigation_action.trim();
 	}
 
 	public void setMitigation_action(String mitigation_action) {
-		this.mitigation_action = mitigation_action;
+		this.mitigation_action = mitigation_action.trim();
 	}
 
 	public String getMitigation_comment() {
-		return mitigation_comment;
+		return mitigation_comment.trim();
 	}
 
 	public void setMitigation_comment(String mitigation_comment) {
-		this.mitigation_comment = mitigation_comment;
+		this.mitigation_comment = mitigation_comment.trim();
 	}
 
 	public String getMitigation_history() {
-		return mitigation_history;
+		return mitigation_history.trim();
 	}
 
 	public void setMitigation_history(String mitigation_history) {
-		this.mitigation_history = mitigation_history;
+		this.mitigation_history = mitigation_history.trim();
 	}
 
 	public String getUnique_id() {
-		return unique_id;
+		return unique_id.trim();
 	}
 
 	public void setUnique_id(String unique_id) {
-		this.unique_id = unique_id;
+		this.unique_id = unique_id.trim();
 	}
 
 }

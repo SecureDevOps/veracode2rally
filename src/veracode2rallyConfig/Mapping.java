@@ -28,43 +28,43 @@ public class Mapping {
 	}
 
 	public String getVeracodename() {
-		return veracodename;
+		return veracodename.trim();
 	}
 
 	public void setVeracodename(String veracodename) {
-		this.veracodename = veracodename;
+		this.veracodename = veracodename.trim();
 	}
 
 	public String getVeracodeid() {
-		return veracodeid;
+		return veracodeid.trim();
 	}
 
 	public void setVeracodeid(String veracodeid) {
-		this.veracodeid = veracodeid;
+		this.veracodeid = veracodeid.trim();
 	}
 
 	public String getRallyname() {
-		return rallyname;
+		return rallyname.trim();
 	}
 
 	public void setRallyname(String rallyname) {
-		this.rallyname = rallyname;
+		this.rallyname = rallyname.trim();
 	}
 
 	public String getRallyid() {
-		return rallyid;
+		return rallyid.trim();
 	}
 
 	public void setRallyid(String rallyid) {
-		this.rallyid = rallyid;
+		this.rallyid = rallyid.trim();
 	}
 
 	public String getImportfilter() {
-		return importfilter;
+		return importfilter.trim();
 	}
 
 	public void setImportfilter(String importfilter) {
-		this.importfilter = importfilter;
+		this.importfilter = importfilter.trim();
 	}
 
 }

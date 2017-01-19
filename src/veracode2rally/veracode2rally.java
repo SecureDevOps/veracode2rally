@@ -98,6 +98,7 @@ public class veracode2rally {
 
 			// using the import_filter, determine what the xpath expression is for filter_query
 			filter_query = GetFilterQuery(import_filter);
+
 			System.out.println("Import Filter: " + import_filter);
 
 			// run filter_query to return a NodeList of the flaws that will be processed
@@ -189,7 +190,7 @@ public class veracode2rally {
 
 		// Set Rally filter. If user specified a unique identifier field in the Configuration application, use that. Otherwise
 		// search for veracode2rallyid contained in the Rally Description field
-		if (!(veracode2rally_config_xml.unique_id_field.equals(""))) {
+		if (veracode2rally_config_xml.unique_id_field.equals("")) {
 			queryRequest.setQueryFilter(new QueryFilter("description", " contains ", "veracode2rally ID: " + ID));
 		} else {
 

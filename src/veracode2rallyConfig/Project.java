@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement (name = "veracode2rally_config")
+@XmlRootElement(name = "veracode2rally_config")
 @XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(propOrder = { "mappings", "veracode", "rally", "customfield" })
 public class Project {

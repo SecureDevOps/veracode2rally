@@ -9,6 +9,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -72,14 +73,13 @@ public class veracode2rallyConfig extends Application {
 	public TextField txtVeracodePassword = new PasswordField();
 	public TextField txtVeracodeApiId = new TextField();
 	public TextField txtVeracodeApiKey = new PasswordField();
-	public CheckBox  chxVeracodeEncrypt = new CheckBox();
-	
-	
+	public CheckBox chxVeracodeEncrypt = new CheckBox();
+
 	public TextField txtRallyUserName = new TextField();
 	public TextField txtRallyPassword = new PasswordField();
 	public TextField txtRallyApiKeyDescription = new TextField();
 	public TextField txtRallyApiKey = new PasswordField();
-	public CheckBox  chxRallyEncrypt = new CheckBox();
+	public CheckBox chxRallyEncrypt = new CheckBox();
 
 	public TextField txtMitigationAction = new TextField();
 	public TextField txtMitigationComment = new TextField();
@@ -96,7 +96,7 @@ public class veracode2rallyConfig extends Application {
 	public ObservableList<String> veracodeLogin = FXCollections.observableArrayList("Username/Password", "API ID/Key");
 	public ComboBox<String> cbxVeracodeLogin = new ComboBox<String>(veracodeLogin);
 
-	public ObservableList<String> rallyLogin = FXCollections.observableArrayList("Username/Password", "API Key");
+	public ObservableList<String> rallyLogin = FXCollections.observableArrayList("Username/Password", "API ID/Key");
 	public ComboBox<String> cbxRallyLogin = new ComboBox<String>(rallyLogin);
 
 	private Stage dialogStage = new Stage();
@@ -111,7 +111,7 @@ public class veracode2rallyConfig extends Application {
 
 	public void start(Stage primaryStage) {
 		try {
-			
+
 			veracode2rallyConfig.primaryStage = primaryStage;
 
 			dialogStage.setTitle("Edit Record");
@@ -179,7 +179,7 @@ public class veracode2rallyConfig extends Application {
 		menuBar.getMenus().addAll(menuFile);
 
 		return menuBar;
-	} 
+	}
 
 	private TabPane createTabs(Window primaryStage) {
 
@@ -249,13 +249,13 @@ public class veracode2rallyConfig extends Application {
 
 		tableView = new TableView<>();
 		tableView.setItems(mappings);
-		
+
 		tableView.getColumns().add(veracodenameColumn);
 		tableView.getColumns().add(veracodeidColumn);
 		tableView.getColumns().add(rallynameColumn);
 		tableView.getColumns().add(rallyidColumn);
 		tableView.getColumns().add(importfilterColumn);
-		
+
 		tableView.getSelectionModel().selectFirst();
 
 		// Handle tableViewselection changes.
@@ -263,7 +263,6 @@ public class veracode2rallyConfig extends Application {
 			validateButtons();
 		});
 
-		
 		tableView.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
@@ -273,11 +272,10 @@ public class veracode2rallyConfig extends Application {
 				}
 			}
 		});
-		
+
 		return tableView;
 	};
 
-	
 	public void launchEditDialog(Window primaryStage, String buttontype) {
 
 		// layout components in a gridpane
@@ -400,7 +398,7 @@ public class veracode2rallyConfig extends Application {
 		}
 
 		dialogStage.close();
-		}
+	}
 
 	// Cancel button clicked
 	public void cancelButtonClicked() {
@@ -439,7 +437,7 @@ public class veracode2rallyConfig extends Application {
 	public void menuSaveClicked() throws IOException {
 
 		if (CurrentFile == null) {
-			
+
 			FileChooser fileChooser = createFileChooser();
 			fileChooser.showSaveDialog(primaryStage);
 		}
@@ -451,7 +449,6 @@ public class veracode2rallyConfig extends Application {
 
 	public void menuSaveAsClicked() throws IOException {
 
-		
 		FileChooser fileChooser = createFileChooser();
 		File file = fileChooser.showSaveDialog(primaryStage);
 
@@ -473,7 +470,6 @@ public class veracode2rallyConfig extends Application {
 		}
 	}
 
-
 	public void saveToFile(File file) {
 		try {
 
@@ -483,37 +479,36 @@ public class veracode2rallyConfig extends Application {
 
 			ArrayList<Veracode> veracodecreds = new ArrayList<Veracode>();
 			if (chxVeracodeEncrypt.isSelected()) {
-					Veracode veracoderecord = new Veracode(txtVeracodeUserName.getText(), Encrypt(txtVeracodePassword.getText()),
-					txtVeracodeApiId.getText(), Encrypt(txtVeracodeApiKey.getText()),
-					cbxVeracodeLogin.getSelectionModel().getSelectedItem(), chxVeracodeEncrypt.isSelected());
-					veracodecreds.add(veracoderecord);
+				Veracode veracoderecord = new Veracode(txtVeracodeUserName.getText(),
+						Encrypt(txtVeracodePassword.getText()), txtVeracodeApiId.getText(),
+						Encrypt(txtVeracodeApiKey.getText()), cbxVeracodeLogin.getSelectionModel().getSelectedItem(),
+						chxVeracodeEncrypt.isSelected());
+				veracodecreds.add(veracoderecord);
+			} else {
+
+				Veracode veracoderecord = new Veracode(txtVeracodeUserName.getText(), txtVeracodePassword.getText(),
+						txtVeracodeApiId.getText(), txtVeracodeApiKey.getText(),
+						cbxVeracodeLogin.getSelectionModel().getSelectedItem(), chxVeracodeEncrypt.isSelected());
+				veracodecreds.add(veracoderecord);
 			}
-			else  {
-				
-					Veracode veracoderecord = new Veracode(txtVeracodeUserName.getText(), txtVeracodePassword.getText(),
-					txtVeracodeApiId.getText(), txtVeracodeApiKey.getText(),
-					cbxVeracodeLogin.getSelectionModel().getSelectedItem(), chxVeracodeEncrypt.isSelected());	
-					veracodecreds.add(veracoderecord);	
-			}
-			
-			
-			ArrayList<Rally> rallycreds = new ArrayList<Rally>();	
+
+			ArrayList<Rally> rallycreds = new ArrayList<Rally>();
 			if (chxRallyEncrypt.isSelected()) {
-					Rally rallyrecord = new Rally(txtRallyUserName.getText(), Encrypt(txtRallyPassword.getText()), Encrypt(txtRallyApiKey.getText()),
-					cbxRallyLogin.getSelectionModel().getSelectedItem(), chxRallyEncrypt.isSelected());
-					rallycreds.add(rallyrecord);
+				Rally rallyrecord = new Rally(txtRallyUserName.getText(), Encrypt(txtRallyPassword.getText()),
+						Encrypt(txtRallyApiKey.getText()), cbxRallyLogin.getSelectionModel().getSelectedItem(),
+						chxRallyEncrypt.isSelected());
+				rallycreds.add(rallyrecord);
+			} else {
+
+				Rally rallyrecord = new Rally(txtRallyUserName.getText(), txtRallyPassword.getText(),
+						txtRallyApiKey.getText(), cbxRallyLogin.getSelectionModel().getSelectedItem(),
+						chxRallyEncrypt.isSelected());
+				rallycreds.add(rallyrecord);
+
 			}
-			else  {
-					
-					Rally rallyrecord = new Rally(txtRallyUserName.getText(), txtRallyPassword.getText(), txtRallyApiKey.getText(),
-					cbxRallyLogin.getSelectionModel().getSelectedItem(), chxRallyEncrypt.isSelected());
-					rallycreds.add(rallyrecord);
-	
-				}
-	
-			
+
 			Customfield custfield = new Customfield(txtMitigationAction.getText(), txtMitigationComment.getText(),
-			txtMitigationHistory.getText(), txtUniqueId.getText());
+					txtMitigationHistory.getText(), txtUniqueId.getText());
 
 			ArrayList<Customfield> customfields = new ArrayList<Customfield>();
 			customfields.add(custfield);
@@ -539,37 +534,33 @@ public class veracode2rallyConfig extends Application {
 	public void loadFromFile(File file) {
 
 		try {
-			
+
 			JAXBContext context = JAXBContext.newInstance(Project.class);
 			Unmarshaller um = context.createUnmarshaller();
 
 			// Reading XML from the file and unmarshalling.
 			Project wrapper = (Project) um.unmarshal(file);
-			
+
 			mappings.clear();
 			mappings.addAll(wrapper.getMappings());
-			
+
 			veracode2rallyConfig.primaryStage.setTitle("Veracode2Rally Configuration - " + file.getAbsolutePath());
 			veracodecreds.clear();
 			veracodecreds.addAll(wrapper.getVeracode());
-	
+
 			txtVeracodeUserName.setText(veracodecreds.get(0).getUsername());
 			txtVeracodeApiId.setText(veracodecreds.get(0).getApi_id());
 			cbxVeracodeLogin.getSelectionModel().select(veracodecreds.get(0).getLogin_credential());
 			chxVeracodeEncrypt.setSelected(veracodecreds.get(0).getEncyrpt());
 			chxVeracodeEncrypt.setSelected(veracodecreds.get(0).getEncyrpt());
-			
-			
-			
+
 			if (veracodecreds.get(0).getEncyrpt()) {
 				txtVeracodePassword.setText(Decrypt(veracodecreds.get(0).getPassword()));
 				txtVeracodeApiKey.setText(Decrypt(veracodecreds.get(0).getApi_key()));
-			}
-			else {
+			} else {
 				txtVeracodePassword.setText(veracodecreds.get(0).getPassword());
-				txtVeracodeApiKey.setText(veracodecreds.get(0).getApi_key());	
+				txtVeracodeApiKey.setText(veracodecreds.get(0).getApi_key());
 			}
-			
 
 			rallycreds.clear();
 			rallycreds.addAll(wrapper.getRally());
@@ -580,12 +571,11 @@ public class veracode2rallyConfig extends Application {
 			if (chxRallyEncrypt.isSelected()) {
 				txtRallyPassword.setText(Decrypt(rallycreds.get(0).getPassword()));
 				txtRallyApiKey.setText(Decrypt(rallycreds.get(0).getApi_key()));
-				}
-				else {
-					txtRallyPassword.setText(rallycreds.get(0).getPassword());
-					txtRallyApiKey.setText(rallycreds.get(0).getApi_key());	
-				}
-							
+			} else {
+				txtRallyPassword.setText(rallycreds.get(0).getPassword());
+				txtRallyApiKey.setText(rallycreds.get(0).getApi_key());
+			}
+
 			customfields.clear();
 			customfields.addAll(wrapper.getCustomfield());
 			txtMitigationAction.setText(customfields.get(0).getMitigation_action());
@@ -622,10 +612,10 @@ public class veracode2rallyConfig extends Application {
 
 		veracodePane.add(new Label("Veracode Password:"), 0, 1);
 		veracodePane.add(txtVeracodePassword, 1, 1);
-	
+
 		veracodePane.add(new Label("Veracode API ID:"), 0, 2);
 		veracodePane.add(txtVeracodeApiId, 1, 2);
-		
+
 		veracodePane.add(new Label("Veracode API Key:"), 0, 3);
 		veracodePane.add(txtVeracodeApiKey, 1, 3);
 
@@ -634,14 +624,13 @@ public class veracode2rallyConfig extends Application {
 
 		veracodePane.add(new Label("Encrypt Password and Key:"), 0, 5);
 		veracodePane.add(chxVeracodeEncrypt, 1, 5);
-		
-		
+
 		cbxVeracodeLogin.getSelectionModel().selectFirst();
 		veracodeCredentialsTab.setContent(veracodePane);
 
 		return veracodeCredentialsTab;
-	} 
-	
+	}
+
 	private Tab createRallyTab() {
 
 		rallyCredentialsTab.setClosable(false);
@@ -666,13 +655,13 @@ public class veracode2rallyConfig extends Application {
 
 		rallyPane.add(new Label("Encrypt Password and Key:"), 0, 4);
 		rallyPane.add(chxRallyEncrypt, 1, 4);
-		
+
 		cbxRallyLogin.getSelectionModel().selectFirst();
 		rallyCredentialsTab.setContent(rallyPane);
 
 		return rallyCredentialsTab;
-	} 
-	
+	}
+
 	private Tab createCustomFieldsTab() {
 
 		customFieldsTab.setClosable(false);
@@ -698,46 +687,42 @@ public class veracode2rallyConfig extends Application {
 		customFieldsTab.setContent(customFieldsPane);
 
 		return customFieldsTab;
-	} 
+	}
 
-	
 	public String Encrypt(String text) {
 
-	StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-		 encryptor.setPassword(";?kpL={vfAr=q$[%"); 	
-		 String strEncryptedText = encryptor.encrypt(text);
-         return strEncryptedText;
+		StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
+		encryptor.setPassword(";?kpL={vfAr=q$[%");
+		String strEncryptedText = encryptor.encrypt(text);
+		return strEncryptedText;
 	}
 
-	
 	public String Decrypt(String text) {
 		StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-		 encryptor.setPassword(";?kpL={vfAr=q$[%"); // could be got from web, env variable...		
-		 String strDecryptedText = encryptor.decrypt(text);
-		 return strDecryptedText;
-			
-	}
-	
-	
-	  public static FileChooser createFileChooser() throws IOException {
+		encryptor.setPassword(";?kpL={vfAr=q$[%"); // could be got from web, env variable...
+		String strDecryptedText = encryptor.decrypt(text);
+		return strDecryptedText;
 
-		  FileChooser chooser = new FileChooser();
-			// Set extension filter
-			FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
-			chooser.getExtensionFilters().add(extFilter);
-			
-	      // initialize chooser	with default path	
-			String currentDir = new File(".").getCanonicalPath();
-		
-			if (new File(currentDir + "\\resources").exists()){
-				chooser.setInitialDirectory(new File(currentDir + "\\resources")); 
-			}		
-			else{
-				chooser.setInitialDirectory(new File(currentDir)); 	
-			}
-			
-			chooser.setInitialFileName("veracode2rallyConfig.xml");
-            return chooser ;
-	   }
-	
+	}
+
+	public static FileChooser createFileChooser() throws IOException {
+
+		FileChooser chooser = new FileChooser();
+		// Set extension filter
+		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML files (*.xml)", "*.xml");
+		chooser.getExtensionFilters().add(extFilter);
+
+		// initialize chooser with default path
+		String currentDir = new File(".").getCanonicalPath();
+
+		if (new File(currentDir + "\\resources").exists()) {
+			chooser.setInitialDirectory(new File(currentDir + "\\resources"));
+		} else {
+			chooser.setInitialDirectory(new File(currentDir));
+		}
+
+		chooser.setInitialFileName("veracode2rallyConfig.xml");
+		return chooser;
+	}
+
 }

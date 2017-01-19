@@ -4,8 +4,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
-
 @XmlType(propOrder = { "username", "password", "api_id", "api_key", "login_credential", "encrypt" })
 public class Veracode {
 	private String username;
@@ -19,79 +17,74 @@ public class Veracode {
 	public Veracode() {
 	}
 
-	public Veracode(String username, String password, String api_id, String api_key, String login_credential, Boolean encrypt) {
+	public Veracode(String username, String password, String api_id, String api_key, String login_credential,
+			Boolean encrypt) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.api_id = api_id;
 		this.api_key = api_key;
 		this.login_credential = login_credential;
-	    this.encrypt = encrypt;
+		this.encrypt = encrypt;
 	}
-
-	 
 
 	@XmlElement
 	public String getUsername() {
-		return username;
+		return username.trim();
 	}
 
 	public void setUsername(String username) {
-		this.username = username;
+		this.username = username.trim();
 	}
-	
+
 	@XmlElement
 	public String getPassword() {
-        return password;
-		
+		return password.trim();
+
 	}
 
 	public void setPassword(String password) {
-      this.password = password;
-		
-		
+		this.password = password.trim();
+
 	}
 
 	@XmlElement
 	public String getApi_id() {
-		return api_id;
+		return api_id.trim();
 	}
 
 	public void setApi_id(String api_id) {
-		this.api_id = api_id;
+		this.api_id = api_id.trim();
 	}
 
 	@XmlElement
 	public String getApi_key() {
-		return api_key;
+		return api_key.trim();
 	}
 
 	public void setApi_key(String api_key) {
-		this.api_key = api_key;
+		this.api_key = api_key.trim();
 	}
 
 	@XmlElement
 	public String getLogin_credential() {
-		return login_credential;
+		return login_credential.trim();
 	}
 
 	public void setLogin_credential(String login_credential) {
-		this.login_credential = login_credential;
+		this.login_credential = login_credential.trim();
 	}
 
-	
-	//@XmlAttribute
+	// @XmlAttribute
 	public Boolean getEncyrpt() {
-        return encrypt;
-		
+		return encrypt;
+
 	}
 
-	//@XmlAttribute
+	// @XmlAttribute
 	public void setEncrypt(Boolean encrypt) {
-      this.encrypt = encrypt;
-		
-		
-	}
+		this.encrypt = encrypt;
 
+	}
 
 }
