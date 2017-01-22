@@ -1,15 +1,7 @@
 ---
 layout: page
-title: About Veracode2Rally
+title: License
 ---
-Need to get in touch?
-<br>
-<a href="https://form.jotform.com/70144163099152" target="_blank" title="Contact Form">Contact us</a>
-<br>
-
-
-
-***License***
 
 This application is not supported by Veracode or CA Technologies (Rally). It
 is free and unencumbered software released into the public domain.
@@ -36,3 +28,11 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org>
+<br>
+<br>
+Need to get in touch?
+<br>
+<a href="https://form.jotform.com/70144163099152" target="_blank" title="Contact Form">Contact us</a>
+
+
+
