@@ -7,7 +7,7 @@ Veracode2Rally is an open source tool created by DevOps teams for DevOps teams. 
 
 **What about mitigating false positives?**
 
-Veracode2Rally handles that too. Developers can propose mitigations and be notified of their approval without ever leaving Rally. Using bidirectional synchronization, Veracode2Rally copies a proposed mitigation from Rally to Veracode. Once approved, the next synchronization copies the notification from Veracode back to Rally and closes the ticket!
+Veracode2Rally handles that too. Developers can propose mitigations and be notified of their approval without ever leaving Rally. Using bidirectional synchronization, Veracode2Rally copies a proposed mitigation from Rally to Veracode. If approved, the next synchronization copies a notification from Veracode back to Rally and closes the ticket!
 
 See Veracode2Rally in action by checking out the 8 minute demo.
 
