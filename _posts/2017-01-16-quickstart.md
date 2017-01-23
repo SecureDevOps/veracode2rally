@@ -10,14 +10,15 @@ tags: [Configuration, QuickStart]
 This document focuses on the basics of configuring Veracode2Rally. Those wanting to explore more advanced configurations such as modifying the underlying XSL file for complex field mapping or review the XSD (XML Schema Definition) for veracode2rally_config.xml should review the documentation at [http://veracode2rally.com](http://veracode2rally.com "http://veracode2rally.com")
 
 
-#Requirements#
+# Requirements #
 
 1. Veracode Credentials - A regular human account or non-human API account with access to the application in Veracode and granted the REVIEWER role. 
 2. Rally Credentials - A regular user account or Rally API Key with EDITOR permissions granted for the Rally project. 
 3. Oracle Java 1.8 installed.
 
 
-#Installation#
+# Installation #
+
 Download **veracode2rally_app.zip** located on GitHub at:
 [https://github.com/SecureDevOps/veracode2rally/blob/master/app/veracode2rally_app.zip?raw=true](https://github.com/SecureDevOps/veracode2rally/blob/master/app/veracode2rally_app.zip?raw=true "cc")
 
@@ -35,7 +36,7 @@ Once configured, you can run veracode2rally at a command prompt by typing:
 
 
 
-#Configuring#
+# Configuration #
 
 Before running Veracode2Rally, it must be configured to map a Veracode application to its corresponding Rally project, store credentials and designate any desired custom fields. Configuration information is saved to **veracode2rally_config.xml** in the resources folder. 
 
@@ -53,7 +54,7 @@ to view the main screen.
 
 Open the blank **veracode2rally_config.xml** file in the resources folder by clicking FILE, then OPEN and save back to that location by clicking FILE, then SAVE when configuration is complete. Each tab represents a needed configuration for Veracode2Rally.
 
-#Project Mapping Tab#
+# Project Mapping Tab #
 
 The purpose of the Project Mapping tab is to map what application in Veracode corresponds to what project in Rally. Project mapping records are created with a 1:1 relationship. Each application in Veracode corresponds to a project in Rally. A single record or many project mapping records can be created. Each Veracode2Rally synchronization will cycle through all project mapping records created. Click New to create a new Project mapping record.
 
@@ -95,7 +96,7 @@ Pick one of the four choices of what flaws are to be exported out of Veracode an
 - Unmitigated flaws affecting policy
 
 
-#Veracode Credentials Tab#
+# Veracode Credentials Tab #
 
 Veracode credentials are stored in **veracode2rally_config.xml**. A Username/Password combination, API ID/Key combination or both can be stored. For Veracode accounts that use Single sign-on (SSO), an API ID/Key should be used.
 
@@ -113,7 +114,7 @@ Credentials for both Username/Password and API ID/Key can be entered but only th
 Checking this box stores the Veracode Password and API Key in encrypted form when writing to **veracode2rally_config.xml**. If you wish to use this feature, it is recommended that you change the default password located in credentials.java and veracode2rallyConfig.java.
 
 
-#Rally Credentials Tab#
+# Rally Credentials Tab #
 
 Rally credentials are stored in **veracode2rally_config.xml**. A Username/Password combination, API Key or both can be stored. For Rally accounts that use Single sign-on (SSO), an API Key should be used. Users can acquire a Rally API Key by navigating to:
 
@@ -134,7 +135,7 @@ Credentials for both Username/Password and API Key can be entered but only the c
 
 Checking this box stores the Rally Password and API Key in encrypted form when writing to **veracode2rally_config.xml**. If you wish to use this feature, it is recommended that you change the default password located in credentials.java and veracode2rallyConfig.java.
 
-#Rally Custom Fields Tab#
+# Rally Custom Fields Tab #
 
 Veracode2Rally can use custom fields in Rally. This enables developers to propose mitigations in Rally and synchronize them with Veracode. To see more about this, please view the demo video at:
 
