@@ -1,0 +1,96 @@
+<textarea rows="100" cols="80" style="border:none;">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="veracode2rally_config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mappings"/>
+        <xs:element ref="veracode"/>
+        <xs:element ref="rally"/>
+        <xs:element ref="customfield"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mappings">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="mapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="veracodename"/>
+        <xs:element ref="veracodeid"/>
+        <xs:element ref="rallyname"/>
+        <xs:element ref="rallyid"/>
+        <xs:element ref="importfilter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="veracodename" type="xs:string"> </xs:element>
+  <xs:element name="veracodeid" type="xs:integer"> </xs:element>
+  <xs:element name="rallyname" type="xs:string"> </xs:element>
+  <xs:element name="rallyid" type="xs:integer"> </xs:element>
+  <xs:element name="importfilter">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="All flaws"/>
+        <xs:enumeration value="Unmitigated flaws affecting policy"/>
+        <xs:enumeration value="Flaws affecting policy"/>
+        <xs:enumeration value="All unmitigated flaws"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="veracode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="username"/>
+        <xs:element ref="password"/>
+        <xs:element ref="api_id"/>
+        <xs:element ref="api_key"/>
+        <xs:element name="login_credential" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="encrypt" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="api_id" type="xs:string"> </xs:element>
+  <xs:element name="rally">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="username"/>
+        <xs:element ref="password"/>
+        <xs:element ref="api_key"/>
+        <xs:element name="login_credential"/>
+      </xs:sequence>
+      <xs:attribute name="encrypt" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customfield">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="unique_id"/>
+        <xs:element ref="mitigation_action"/>
+        <xs:element ref="mitigation_comment"/>
+        <xs:element ref="mitigation_history"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unique_id" type="xs:string"> </xs:element>
+  <xs:element name="mitigation_action" type="xs:string"> </xs:element>
+  <xs:element name="mitigation_comment" type="xs:string"> </xs:element>
+  <xs:element name="mitigation_history" type="xs:string"> </xs:element>
+  <xs:element name="username" type="xs:string"> </xs:element>
+  <xs:element name="password" type="xs:string"> </xs:element>
+  <xs:element name="api_key" type="xs:string"> </xs:element>
+  <xs:element name="login_credential">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Username/Password"/>
+        <xs:enumeration value="API Key"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>
+</textarea>
