@@ -96,7 +96,7 @@ public class veracode2rallyConfig extends Application {
 	public ObservableList<String> veracodeLogin = FXCollections.observableArrayList("Username/Password", "API ID/Key");
 	public ComboBox<String> cbxVeracodeLogin = new ComboBox<String>(veracodeLogin);
 
-	public ObservableList<String> rallyLogin = FXCollections.observableArrayList("Username/Password", "API ID/Key");
+	public ObservableList<String> rallyLogin = FXCollections.observableArrayList("Username/Password", "API Key");
 	public ComboBox<String> cbxRallyLogin = new ComboBox<String>(rallyLogin);
 
 	private Stage dialogStage = new Stage();
