@@ -154,9 +154,11 @@ public class credentials {
 
 		case "Username/Password":
 			rallyapi = new RallyRestApi(new URI("https://rally1.rallydev.com"), rally_username, rally_password);
+			break;
 
 		case "API Key":
 			rallyapi = new RallyRestApi(new URI("https://rally1.rallydev.com"), rally_api_key);
+			break;
 		}
 
 		return rallyapi;
