@@ -7,7 +7,7 @@ tags: [Configuration, QuickStart]
 # How To Get Up And Running #
 ----------
 
-This document focuses on the basics of configuring Veracode2Rally. Those wanting to explore more advanced configurations such as modifying the underlying XSL file for complex field mapping or review the XSD (XML Schema Definition) for veracode2rally_config.xml should review the documentation at [http://veracode2rally.com](http://veracode2rally.com "http://veracode2rally.com")
+This document focuses on the basics of configuring Veracode2Rally. Those wanting to explore more advanced configurations such as modifying the underlying XSL file for complex field mapping or review the XSD (XML Schema Definition) for veracode2rally_config.xml should review the documentation at [https://securedevops.github.io/veracode2rally](https://securedevops.github.io/veracode2rally "https://securedevops.github.io/veracode2rally/")
 
 
 # Requirements #
