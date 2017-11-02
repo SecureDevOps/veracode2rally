@@ -2,7 +2,7 @@
 title: Veracode2Rally
 description: "A DevOps tool for integrating Veracode with Rally"
 baseurl: /veracode2rally
-url: "http://veracode2rally" 
+url: "https://securedevops.github.io" 
 tagline: A DevOps tool for integrating Veracode scan results with Rally 
 
 # Build settings
