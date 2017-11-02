@@ -15,4 +15,4 @@ Users can choose what type of flaws are exported.
  4. Unmitigated flaws affecting policy
 
 There's documentation on how to install, configure and a video demo showing Veracode2Rally in action at
-[http://veracode2rally.com](http://veracode2rally.com)
+[https://securedevops.github.io/veracode2rally/](https://securedevops.github.io/veracode2rally/)
