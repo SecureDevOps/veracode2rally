@@ -1,7 +1,7 @@
 # Site settings
 title: Veracode2Rally
 description: "A DevOps tool for integrating Veracode with Rally"
-baseurl: "" 
+baseurl: /veracode2rally
 url: "http://veracode2rally" 
 tagline: A DevOps tool for integrating Veracode scan results with Rally 
 
